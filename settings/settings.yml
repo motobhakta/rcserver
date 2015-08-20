@@ -7,16 +7,16 @@
   :licensefile: settings/license.key
   :redis: localhost:6379
   :syncserver: http://localhost:9292
-  :push_server: http://someappname@rhoconnectpush.herokuapp.com/
+  :push_server: https://someappname@rhoconnectpush.herokuapp.com/
   :api_token: my-rhoconnect-token
 :test:
   :licensefile: settings/license.key
   :redis: localhost:6379
   :syncserver: http://localhost:9292
-  :push_server: http://someappname@rhoconnectpush.herokuapp.com/
+  :push_server: https://someappname@rhoconnectpush.herokuapp.com/
   :api_token: my-rhoconnect-token
 :production:
   :licensefile: settings/license.key
   :redis: localhost:6379
   :syncserver: http://localhost:9292
-  :push_server: http://someappname@rhoconnectpush.herokuapp.com/
+  :push_server: https://someappname@rhoconnectpush.herokuapp.com/
