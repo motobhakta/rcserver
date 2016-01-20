@@ -1,4 +1,4 @@
-class Product < Rhoconnect::Model::Base
+class Syncerror < Rhoconnect::Model::Base
   def initialize(source) 
     super(source)
     $key = "id"
@@ -27,7 +27,7 @@ class Product < Rhoconnect::Model::Base
   end
 
   def create(create_hash)
-    puts "BHAKTA #{create_hash.inspect}"
+    puts "#{create_hash.inspect}"
     value = Store.get_value($key)
     if(value)
       value = value.to_i + 1
@@ -47,14 +47,14 @@ class Product < Rhoconnect::Model::Base
   end
  
   def update(update_hash)
-    puts "BHAKTA #{update_hash.inspect}"
+    puts "#{update_hash.inspect}"
     raise Rhoconnect::Model::Exception.new("Error updating record.")
     # TODO: Update an existing record in your backend data source
     #raise "Please provide some code to update a single record in the backend data source using the update_hash"
   end
  
   def delete(delete_hash)
-    puts "BHAKTA #{delete_hash.inspect}"
+    puts "#{delete_hash.inspect}"
     raise Rhoconnect::Model::Exception.new("Error deleting record.")
     # TODO: write some code here if applicable
     # be sure to have a hash key and value for "object"

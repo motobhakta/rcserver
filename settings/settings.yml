@@ -1,22 +1,33 @@
 #Sources
 :sources:
   Product:
-    :poll_interval: 300
+    :poll_interval: 0
+  Syncerror:
+    :poll_interval: 0
 
 :development:
   :licensefile: settings/license.key
   :redis: localhost:6379
   :syncserver: http://localhost:9292
-  :push_server: https://someappname@rhoconnectpush.herokuapp.com/
+  #:push_server: https://someappname@rhoconnectpush.herokuapp.com/
+  :push_server: http://someappname@localhost:8675
   :api_token: my-rhoconnect-token
+  :iphonecertfile: settings/apple_push_cert.pem
+  :iphoneport: 2195
+  :iphonepassphrase: ""
+  :iphoneserver: gateway.sandbox.push.apple.com
+
 :test:
   :licensefile: settings/license.key
   :redis: localhost:6379
   :syncserver: http://localhost:9292
-  :push_server: https://someappname@rhoconnectpush.herokuapp.com/
+  #:push_server: https://someappname@rhoconnectpush.herokuapp.com/
+  :push_server: http://someappname@localhost:8675
   :api_token: my-rhoconnect-token
-:production:
-  :licensefile: settings/license.key
-  :redis: localhost:6379
-  :syncserver: http://localhost:9292
-  :push_server: https://someappname@rhoconnectpush.herokuapp.com/
+# :production:
+#   :licensefile: settings/license.key
+#   :redis: redis://redistogo:14e86fff62863ce7552ae148679c1fff@bluegill.redistogo.com:9546/
+#   #:syncserver: https://push-rcserver-cedar.herokuapp.com
+#   #:push_server: http://someappname@rhoconnectpush.herokuapp.com/
+#   :push_server: http://someappname@localhost:8675
+#   :api_token: my-rhoconnect-token
